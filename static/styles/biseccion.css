@@ -1,0 +1,70 @@
+input{
+    border:none;
+    border-radius: 5px;
+    height: 30px;
+    margin:10px;
+    width: 200px;
+    font-size:1.3rem;
+}
+.box-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin:30px;
+    
+}
+
+.input{
+    margin:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intervalo{
+    width: 70px;
+    text-align: center;
+}
+.boton{
+    border:none;
+    height: 56px;
+    font-size:1.8rem;
+    padding:10px;
+    text-align: center;
+    min-width: 250px;
+    border-radius: 10px;
+    background-color: #EEEA7E;
+    margin:10px;
+}
+.boton:hover{
+    border:1px solid black;
+}
+/* GRAfica y tabla */
+.grafica{
+    display:none;
+    margin: 30px;
+    min-width: 320px;
+}
+.tabla{
+    display:flex;
+    font-size:1.3rem;
+    max-width:80%;
+    overflow-x:auto;
+    margin:10px;
+}
+.grafica,.tabla{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+}
+.i-truncate{
+    width: 30px;
+    text-align: center;
+}
+.i-error{
+    width: 100px;
+    text-align: center;
+}
+.i-funcion{
+    width: 350px;
+    text-align: center;
+}

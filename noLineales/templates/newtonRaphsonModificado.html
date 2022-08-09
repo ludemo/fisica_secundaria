@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load index %}
+{% block estilos%}
+  <link rel="stylesheet" href="{% static 'styles/biseccion.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
+{% block title %}
+  <title>Newton Rapshon Modificado</title> 
+{% endblock %}
+
+{%block body%}
+{% include 'navbar-noLineales.html' %}
+  <div class ="cuerpo">
+    <h1>Newton Raphson Modificado</h1>
+    <form action="" method="POST">{% csrf_token %}
+        <div class="box-input">
+          <div class="input">
+            <label>Input function:</label> <input id="funcionF" onchange="saveValue(this);" type="text" name="inputField" size="30"/>
+          </div>
+          <div class="input">
+            Input point A: <input type="number" id = "puntoA" step="any" onchange="saveValue(this);" name="puntoA">
+          </div>
+          <div class="input">
+            Input Error:<input type="number" value="0.0001" step="any" name="errorEstimado">
+          </div>
+        </div>
+        <div class="box-botones">
+          <input class="boton" type="submit" value="submit">
+          <button class="boton" onclick="evalInput(document.getElementById('funcionF').value);return false;">Mostrar Grafico</button>  
+        </div>
+        <div class="info">
+          <div class="grafica" id="grafica">
+            <div id="applet_container" ></div>
+          </div>
+          <div class="tabla" id="tabla"> 
+            <div>
+              <table>
+                  <tr>
+                    <th>xn</th>
+                    <th>fxn</th>
+                    <th>dfxn</th>
+                    <th>dfxn2</th>
+                    <th>ddfxn</th>     
+                    <th>xr</th>
+                    <th>ERROR</th>
+                  </tr>
+                  {% for i in count %}
+                  <tr>
+                    <td>{{ xn|index:i }}</td>
+                    <td>{{ fxn|index:i }}</td>
+                    <td>{{ dfxn|index:i }}</td>
+                    <td>{{ dfxn2|index:i }}</td>
+                    <td>{{ ddfxn|index:i }}</td>
+                    <td>{{ xr|index:i }}</td>
+                    <td>{{ err|index:i }}</td>
+                  </tr>
+                  {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+    </form>  
+  
+  </div>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/method.js' %}"></script>
+  <script type="text/javascript">
+    function evalInput(strInput) {
+      tabla=document.getElementById("tabla")  
+      grafica =document.getElementById("grafica")
+      grafica.style.display="flex";
+      tabla.style.display="none";
+      ggbApplet.evalCommand(strInput);
+      return false; 
+    }
+    document.getElementById("funcionF").value = getSavedValue("funcionF");   
+    document.getElementById("puntoA").value = getSavedValue("puntoA");  
+        function saveValue(e){
+            var id = e.id;  
+            var val = e.value; 
+            localStorage.setItem(id, val);
+        }
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";
+            }
+            return localStorage.getItem(v);
+        }
+  </script>
+{% endblock %}

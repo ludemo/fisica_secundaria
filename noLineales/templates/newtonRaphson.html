@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load index %}
+{% block estilos%}
+  <link rel="stylesheet" href="{% static 'styles/biseccion.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
+{% block title %}
+  <title>Newton Rapshon</title> 
+{% endblock %}
+
+{%block body%}
+{% include 'navbar-noLineales.html' %}
+  <div class ="cuerpo">
+    <h1>Newton Raphson</h1>
+    <form action="" method="POST">{% csrf_token %}
+        <div class="box-input">
+          <div class="input">
+            <label>Input function:</label> <input class="i-funcion" id="funcionF" type="text" name="inputField" size="30"/>
+          </div>
+          <div class="input">
+            Punto A: <input class="intervalo" type="number" step="any" name="puntoA">
+          </div>
+          <div class="input">
+            Error:<input class="i-error" type="number" step="any" value="0.0001" name="errorEstimado">
+          </div>
+        </div>
+        <div class="box-botones">
+          <input class="boton" type="submit" value="Mostrar tabla">
+          <button class="boton" onclick="evalInput(document.getElementById('funcionF').value);return false;">Mostrar Grafico</button>  
+        </div>
+        <div class="info">
+          <div class="grafica" id="grafica">
+            <div id="applet_container" ></div>
+          </div>
+          <div class="tabla" id="tabla"> 
+            <div>
+              <table>
+                <tr>
+                  <th>xn</th>
+                  <th>fxn</th>
+                  <th>dfxn</th>
+                  <th>xr</th>
+                  <th>ERROR</th>
+                </tr>
+                {% for i in count %}
+                <tr>
+                  <td>{{ xn|index:i }}</td>
+                  <td>{{ fxn|index:i }}</td>
+                  <td>{{ dfxn|index:i }}</td>
+                  <td>{{ xr|index:i }}</td>
+                  <td>{{ err|index:i }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+    </form>  
+  
+  </div>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/method.js' %}"></script>
+  <script type="text/javascript">
+    function evalInput(strInput) {
+      tabla=document.getElementById("tabla")  
+      grafica =document.getElementById("grafica")
+      grafica.style.display="flex";
+      tabla.style.display="none";
+      ggbApplet.evalCommand(strInput);
+      return false; 
+    }
+  </script>
+{% endblock %}
