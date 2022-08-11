@@ -41,6 +41,14 @@ INSTALLED_APPS = [
     'noLineales',
     'algebraicas',
     'curvas',
+    'Dinamica',
+    'Electrodinamica',
+    'Electroestatica',
+    'Estatica',
+    'Movimento_una_dimension',
+    'Temperatura',
+    'Teorida_Relatividad',
+    'Vectores',
 ]
 
 MIDDLEWARE = [

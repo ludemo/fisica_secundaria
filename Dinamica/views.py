@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def Dinamica(request):
+  return render(request, 'dinamica.html', context={})

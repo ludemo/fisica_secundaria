@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def Vectores(request):
+  return render(request, 'vectores.html', context={})

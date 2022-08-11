@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def Teoria_relatividad(request):
+  return render(request, 'teoria_relatividad.html', context={})
+

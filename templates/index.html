@@ -13,16 +13,36 @@
     <h1>Métodos numéricos</h1>
     <div class="conteiner-metodos">
         <div class="bloque">
-            <img src="{% static 'img/lineal.png'%}" alt=""><p>Ecuaciones no lineales</p>
-            <a class="bloque__link" href="{% url 'noLineales:Biseccion' %}"></a>
+            <img src="{% static 'img/lineal.png'%}" alt=""><p>Analisis Vectorial</p>
+            <a class="bloque__link" href="{% url 'vectores' %}"></a>
         </div>
         <div class="bloque">
-            <img src="{% static 'img/algebra.png' %}" alt=""><p>Ecuaciones algebraicas</p>
-            <a class="bloque__link" href="{% url 'algebraicas:gauss_jordan_view' %}"></a>
+            <img src="{% static 'img/algebra.png' %}" alt=""><p>Movimiento en una dimensaión</p>
+            <a class="bloque__link" href="{% url 'movimiento_una_dimension' %}"></a>
         </div>
         <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Ajustes de curvas e interpolación</p>
-            <a class="bloque__link" href="{% url 'curvas:minimos_cuadrados' %}"></a>
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Estática</p>
+            <a class="bloque__link" href="{% url 'estatica' %}"></a>
+        </div>
+        <div class="bloque">
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Dinamica</p>
+            <a class="bloque__link" href="{% url 'dinamica' %}"></a>
+        </div>
+        <div class="bloque">
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Temperatura</p>
+            <a class="bloque__link" href="{% url 'escalas' %}"></a>
+        </div>
+        <div class="bloque">
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Electroestatica</p>
+            <a class="bloque__link" href="{% url 'electroestatica' %}"></a>
+        </div>
+        <div class="bloque">
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Electrodinamica</p>
+            <a class="bloque__link" href="{% url 'electrodinamica' %}"></a>
+        </div>
+        <div class="bloque">
+            <img src="{% static 'img/curvas.png' %}" alt=""><p>Teoría de la relatividad</p>
+            <a class="bloque__link" href="{% url 'teoria_relatividad' %}"></a>
         </div>
     </div>
     {% endblock %}
