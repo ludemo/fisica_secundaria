@@ -10,42 +10,70 @@
 
 
     {% block body %}
-    <h1>Métodos numéricos</h1>
-    <div class="conteiner-metodos">
-        <div class="bloque">
-            <img src="{% static 'img/lineal.png'%}" alt=""><p>Analisis Vectorial</p>
-            <a class="bloque__link" href="{% url 'vectores' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/algebra.png' %}" alt=""><p>Movimiento en una dimensaión</p>
-            <a class="bloque__link" href="{% url 'movimiento_una_dimension' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Estática</p>
-            <a class="bloque__link" href="{% url 'estatica' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Dinamica</p>
-            <a class="bloque__link" href="{% url 'dinamica' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Temperatura</p>
-            <a class="bloque__link" href="{% url 'escalas' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Electroestatica</p>
-            <a class="bloque__link" href="{% url 'electroestatica' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Electrodinamica</p>
-            <a class="bloque__link" href="{% url 'electrodinamica' %}"></a>
-        </div>
-        <div class="bloque">
-            <img src="{% static 'img/curvas.png' %}" alt=""><p>Teoría de la relatividad</p>
-            <a class="bloque__link" href="{% url 'teoria_relatividad' %}"></a>
-        </div>
+    <div class="header">
+        <a href="/" class="header__button">Calculadora</a>
+        <h1 class="header__title" >Física</h1>
     </div>
-    {% endblock %}
+    <div class="container">
+        <a href="{% url 'vectores' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Analisis vectorial</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'movimiento_una_dimension' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Movimiento en una dimensión</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'estatica' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Estática</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'dinamica' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Dinamica</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'escalas' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Temperatura</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'electroestatica' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Electroestatica</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'electrodinamica' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Electrodinamica</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+        <a href="{% url 'teoria_relatividad' %}" class="card">
+            <img class="card__image" src="https://matemathweb.com/wp-content/uploads/2019/08/vectores-2.png" alt="analisis vectorial" width="100px" height="70px">
+            <div class="card__content">
+            <h2 class="card__title">Teoría de la relatividad</h2>
+            <p class="card__description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque delectus deleniti porro vitae recusandae cum facere, eos, assumenda placeat quas praesentium maxime! Error aliquid odio aut nesciunt porro culpa.</p>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
 
 
 

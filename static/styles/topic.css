@@ -1,0 +1,148 @@
+h2 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.topic {
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.topic__name {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.topic_explanation {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.topic__solvedExercises {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.topic__proposedExercises{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0;
+}
+
+.exercise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  background-color: #3C9077;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: .5em;
+}
+
+.exercise:hover {
+  cursor: pointer;
+}
+
+.exercise__icon {
+  margin-left: auto;
+}
+
+.exercise__solution{
+  margin: 20px 0;
+  -webkit-transition: height .4s;
+  -o-transition: height .4s;
+  transition: height .4s;
+  font-size: 18px;
+  display: none;
+}
+
+.exercise__solution--display{
+  display: block;
+}
+
+.exercise__image {
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.seeAnswers {
+  text-decoration: none;
+  width: 220px;
+  padding: 10px;
+  border-radius: .5em;
+  background-color: #EEEA7E ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+}
+
+.seeAnswers:hover {
+  background-color: #ece634 ;
+}
+
+.answers {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  margin: 40vh auto;
+  border-radius: .5em;
+  background-color: #EEEA7E;
+}
+
+.answers ul {
+  padding: 0 20px;
+}
+
+.answers li {
+  list-style: none;
+}
+
+.answers__close {
+  position: relative;
+  text-decoration: none;
+  font-size: 36px;
+  top: 10px;
+  left: 460px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.background:target {
+  visibility: visible;
+  opacity: 1;
+}
