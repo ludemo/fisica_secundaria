@@ -2,8 +2,76 @@
 {% load static %}
 {% load index %}
 {% block body %}
+{% block script_top %}
+<link rel="stylesheet" href="{% static 'styles/topic.css' %}">
+{% endblock %}
 {% include 'navbar.html' %}
 <div>
-  fuerza friccion
+  <div class="topic">
+    <h1 class="topic__name">Fuerza de fricción</h1>
+    <h2 class="topic__theory">Teoria</h2>
+    <p class="topic_explanation">
+      La fricción, fuerza de roce o fuerza de rozamiento es una fuerza existente entre dos superficies que se encuentren en contacto, y que se opone al movimiento, o sea, tiene dirección contraria al movimiento. Esta fuerza puede ser de dos tipos: estática (cuando se opone al inicio de un deslizamiento) o dinámica (cuando se opone al movimiento relativo).
+      La fuerza de fricción no es una de las fuerzas fundamentales del universo, como lo es la gravedad, sino que se debe a la compleja interacción entre la superficie de dos objetos en contacto físico. Generalmente se habla de fricción para objetos sólidos, pero también existe fricción en los líquidos: el efecto de la fricción entre las capas de una sustancia líquida define su viscosidad.
+       <br>
+  <b>Fuerza de fricción estática</b>  <br>
+  La fricción estática (Fe) es la fuerza que tiende a oponerse al desplazamiento relativo entre dos superficies en contacto. Se trata de la fuerza que se necesita vencer para iniciar el movimiento de un objeto. Es siempre menor o igual al coeficiente de rozamiento estático (que tiene un valor empírico y depende del material) entre las dos superficies multiplicado por la fuerza normal.
+Esta fricción estática suele ser mayor a la dinámica, lo cual explica por qué es más difícil empezar a empujar un mueble pesado sobre suelo rugoso, que seguir empujándolo una vez que ya está en movimiento.
+  <br>
+  <b>Fuerza de fricción dinámica </b>  <br>
+  La fricción dinámica (Fd) es la fuerza que se opone al desplazamiento de un objeto que ya se encuentra en movimiento, a diferencia de la fricción estática.
+  Es una magnitud constante, ya que la cantidad de fuerza necesaria para mantener el movimiento en marcha no cambia siempre que la aceleración sea constante. Por lo tanto, es igual al coeficiente de rozamiento dinámico, denotado por la letra griega μ, multiplicada por la fuerza normal.
+   <br>
+
+
+    <h2>Ejercicios resueltos</h2>
+    <div class="topic__solvedExercises">
+      <button class="exercise">Ejercicio 1 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p> Un bloque de acero tiene un peso de 30 N, y éste comienza a deslizarse sobre una superficie totalmente horizontal de madera, con ello se produce una fuerza máxima de fricción estática cuya magnitud es de 15 N, como se observa en la imagen. Calcule el coeficiente de fricción estático entre el acero y la madera.<p/>
+        <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_2.png' %}"></img>
+        <p> Como lo que nos piden es prácticamente el coeficiente de rozamiento de fricción estática, solamente debemos recordar que en nuestra fórmula es la razón entre la fuerza estática máxima y la normal, dichos datos los tenemos<p/>
+          <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_3.png' %}"></img>
+      </div>
+      <button class="exercise">Ejercicio 2 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p> Calcular la fuerza necesaria que se necesita aplicar a un mueble cuyo peso es de 450 N para poder deslizarlo a una velocidad constante horizontalmente, donde el coeficiente de fricción dinámico es de 0.43 <p/>
+          <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_4.png' %}"></img>
+          <p> En este caso nos proporcionan el coeficiente de fricción dinámico, además del peso del mueble, es lógico que tendremos que utilizar la fórmula de la fuerza de fricción dinámica (ya que es opuesta a la fuerza que jala el objeto).  <br>
+
+            Nota: El valor de la fuerza normal (N) actúa en dirección al peso, es por eso que la fuerza normal tendrá el mismo valor que el peso. Si el mueble estuviera en un plano inclinado, entonces el problema tendría más procedimientos, ya que tendríamos que descomponer en forma rectangular a los vectores del peso, para poder encontrar la normal.
+            Bueno asumiendo lo dicho anteriormente, tendríamos que aplicar nuestra fórmula:
+            
+          <p/>
+          <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_5.png' %}"></img>
+      </div>
+    </div>
+    <h2 >Ejercicios propuesto</h2>
+    <div class="topic__proposedExercises">
+      <button class="exercise">Ejercicio 1 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p>  Tratan de mover una caja de 20 kg de peso tirando con una cuerda que forma 30° con la superficie horizontal ejerciendo con ella una fuerza de 50 N. Si se sabe que el coeficiente de rozamiento estático entre los dos materiales es μe = 0,26, averiguar si con esta fuerza y con este ángulo va a poder arrastrarse la caja. <p/>
+      </div>
+      <button class="exercise">Ejercicio 2 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p>Un automóvil circula por una curva plana (sin peralte) de 250 m de radio. El coeficiente de rozamiento estático de los neumáticos con el asfalto de la carretera es μe = 0,4.
+          Averiguar si el conductor intentase pasar la curva a una velocidad de 31,5 m/s, el coche derraparía.
+          <p/>
+      </div>
+    </div> 
+    <a class="seeAnswers" href="#popup">Respuestas de propuestos 
+      <svg class="seeAnswers__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M396 512a112 112 0 1 0 224 0a112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3c7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176s176 78.8 176 176s-78.8 176-176 176z"/></svg>
+    </a>
+  </div>
+  <div id="popup" class="background">
+    <div class="answers" >
+      <a class="answers__close" href="#"> &times;</a>
+      <ul>
+        <li><b>Ejercicio 1</b>: 25N</li>
+        <li><b>Ejercicio 2</b>: 44.52 N</li>
+      </ul>
+    </div>
+  </div>
+  <script src="{% static 'js/topic.js' %}"></script>
 <div/>
 {% endblock %}
