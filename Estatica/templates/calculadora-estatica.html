@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load index %}
+{% block body %}
+{% include 'navbar.html' %}
+<div>
+	<form action="." method='POST' style="text-align: center;" > {% csrf_token  %}
+		<input type="number" name='gr_a' />
+		<input type="number" name='gr_b' />
+		<input type="number" name='w' />
+
+		<button type="submit">Calcular<button/>
+	</form>
+	{% if a  %} 
+	<h3 style="text-align: center;" >Resultado: A= {{ a  }} y B= {{ b  }}<h3/>
+
+	{% endif %}
+<div/>
+{% endblock %}

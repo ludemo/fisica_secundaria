@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load index %}
+{% block body %}
+{% include 'navbar.html' %}
+<div>
+
+	<form action="." method='POST' style="text-align: center;" >{% csrf_token %}
+	
+		Masa: <input type="number" name='m'/>
+		Calor Esp.: <input type="number" name='c'/>
+		V. Temp.: <input type="number" name='vt'/>
+		<button type='submit'>Calcular Calor<button/>
+	</form>
+		
+		
+	{% if rpta %}
+	<div>
+	<h3 style="text-align: center;">Respuesta: {{ rpta }}</h3>
+	<div/>
+	{% endif %}
+<div/>
+{% endblock %}
