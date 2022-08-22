@@ -1,9 +1,67 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load index %}
+<head>
+  {% block estilos%}
+    <link rel="stylesheet" href="{% static 'styles/biseccion.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/mru.css' %}">
+  {% endblock %}
+
+  {% block title %}
+    <title>MRU</title>
+  {% endblock %}
+</head>
 {% block body %}
 {% include 'navbar.html' %}
 <div>
-  MRU
-<div/>
+  <h1>Movimiento Rectilíneo Uniforme</h1>
+  <form action="/movimiento_en_una_dimension/MRU/" method="POST"> {% csrf_token %}
+    <div class="box-input">
+      Hallar la distancia
+      <div class="input">
+        <label>Velocidad: </label><input class="entrada" type="number" name="velocidad" "entrada"> m/s
+      </div>
+      <div class="input">
+        <label>Tiempo: </label><input class="entrada" type="number" name="tiempo" "entrada"> s
+      </div>
+      <div class="box-botones">
+        <input class="boton" type="submit" value="Calcular" onclick="mostrarRespuesta()">
+      </div>
+    </div>
+    <div class="rpta" id="rpta">La respuesta es {{ resultado }}</div>
+  </form>
+
+  <form action="/movimiento_en_una_dimension/MRU/" method="POST" >    {% csrf_token %}
+    <div class="box-input">
+      Hallar el tiempo
+      <div class="input">
+        <label>Distancia: </label><input class="entrada" type="number" name="distancia" "entrada"> m
+      </div>
+      <div class="input">
+        <label>Velocidad: </label><input class="entrada" type="number" name="velocidad2" "entrada"> m/s
+      </div>
+      <div class="box-botones">
+        <input class="boton" type="submit" value="Calcular" onclick="mostrarRespuesta()">
+      </div>
+    </div>
+    <div class="rpta" id="rpta2">La respuesta es {{ resultado2 }}</div>
+  </form>
+  <form action="/movimiento_en_una_dimension/MRU/" method="POST" >    {% csrf_token %}
+    <div class="box-input">
+      Hallar la velocidad
+      <div class="input">
+        <label>Distancia: </label><input type="number" class="entrada"> m
+      </div>
+      <div class="input">
+        <label>Tiempo: </label><input type="number" class="entrada"> s
+      </div>
+      <div class="box-botones">
+        <input class="boton" type="submit" value="Calcular">
+      </div>
+    </div>
+    <div class="rpta" id="rpta3">La respuesta es {{ resultado3 }}</div>
+  </form>  
+</div>
+<script src="{% static 'js/dimension.js' %}"></script>
 {% endblock %}
