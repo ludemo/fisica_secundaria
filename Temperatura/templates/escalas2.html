@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load index %}
+{% block body %}
+{% block script_top %}
+<link rel="stylesheet" href="{% static 'styles/topic.css' %}">
+{% endblock %}
+{% include 'navbar.html' %}
+<div>
+  <div class="topic">
+    <h1 class="topic__name">Escalas de temperatura</h1>
+    <h2 class="topic__theory">Teoria</h2>
+    <p class="topic_explanation">
+      La temperatura se mide indirectamente a través de las magnitudes termométricas. Como vamos a ver, usaremos los valores de estas magnitudes en ciertos estados fijos para calibrar los termómetros, estableciendo, así, una escala. Ejemplos de estos estados fijos son la congelación o la ebullición del agua.
+       <br> <br>
+  <b>Escala centígrada o Celsius</b>  <br>
+  Se asigna el valor 0 del termómetro al punto normal de congelación del agua <br>
+  Se asigna el valor 100 del termómetro al punto normal de ebullición del agua <br>
+  Dicho intervalo se divide en 100 partes iguales. Cada una de ellas se denomina grado Celsius ( ºC )   <br>
+  <b>Escala Fahrenheit</b>  <br>
+  Se asigna el valor 32 del termómetro al punto normal de congelación del agua  <br>
+Se asigna el valor 212 del termómetro al punto normal de ebullición del agua  <br>
+Dicho intervalo se divide en 180 partes iguales. Cada una de ellas se denomina grado Fahrenheit ( ºF )  <br>
+
+<b>Escala Kelvin, absoluta o Kelvin</b>  <br>
+Cero absoluto de temperatura. Es el estado de mínima temperatura que puede tener un cuerpo. En él, el movimiento de los átomos y moléculas que componen el cuerpo sería nulo. Es una temperatura teórica que no puede alcanzarse en la práctica. <br>
+Punto triple del agua. El punto triple del agua es aquella pareja temperatura-presión en la que coexiste el agua en estado sólido, liquido y gaseoso. Concretamente la temperatura sería 0.01 ºC y la presión 611.73 Pa. <br>
+Proceso. Se asigna el valor 0 del termómetro a la temperatura más baja que puede existir, el cero absoluto. Luego, se asigna el valor 273.16 al punto triple del agua. Posteriormente, se hace coincidir el tamaño de los grados Kelvin con los Grados Celsius. <br>
+
+
+
+    <h2>Ejercicios resueltos</h2>
+    <div class="topic__solvedExercises">
+      <button class="exercise">Ejercicio 1 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p> Si observamos un incremento de temperatura en un termómetro de 24 ºF, ¿a cuántos grados kelvin corresponde dicho incremento?¿y a cuántos centígrados?<p/>
+        <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_2.png' %}"></img>
+        <p> Como lo que nos piden es prácticamente el coeficiente de rozamiento de fricción estática, solamente debemos recordar que en nuestra fórmula es la razón entre la fuerza estática máxima y la normal, dichos datos los tenemos<p/>
+          <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_3.png' %}"></img>
+      </div>
+      <button class="exercise">Ejercicio 2 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p> Calcular la fuerza necesaria que se necesita aplicar a un mueble cuyo peso es de 450 N para poder deslizarlo a una velocidad constante horizontalmente, donde el coeficiente de fricción dinámico es de 0.43 <p/>
+          <img class="exercise__image" src="{% static 'img/Estatica/Screenshot_4.png' %}"></img>
+          <p> En este caso nos proporcionan el coeficiente de fricción dinámico, además del peso del mueble, es lógico que tendremos que utilizar la fórmula de la fuerza de fricción dinámica (ya que es opuesta a la fuerza que jala el objeto).  <br>
+
+            Nota: El valor de la fuerza normal (N) actúa en dirección al peso, es por eso que la fuerza normal tendrá el mismo valor que el peso. Si el mueble estuviera en un plano inclinado, entonces el problema tendría más procedimientos, ya que tendríamos que descomponer en forma rectangular a los vectores del peso, para poder encontrar la normal.
+            Bueno asumiendo lo dicho anteriormente, tendríamos que aplicar nuestra fórmula:
+            
+          <p/>
+          <img class="exercise__image" src="{% static 'img/Temperatura/Screenshot_5.png' %}"></img>
+      </div>
+    </div>
+    <h2 >Ejercicios propuesto</h2>
+    <div class="topic__proposedExercises">
+      <button class="exercise">Ejercicio 1 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p>  Normalmente, el cuerpo humano puede soportar una temperatura de 105°F por cortos periodos sin sufrir daños permanentes en el cerebro u otros órganos vitales. ¿Cuál es esa temperatura en grados Celsius? <p/>
+      </div>
+      <button class="exercise">Ejercicio 2 <img class="exercise__icon" src="{% static 'img/triangle.svg' %}"> </button>
+      <div class="exercise__solution">
+        <p>El etilenglicol es un compuesto orgánico líquido que se utiliza como anticongelante en los radiadores de los automóviles. Se congela a -11.6°C. Calcule esa temperatura de congelación en grados Kelvin.
+          <p/>
+      </div>
+    </div> 
+    <a class="seeAnswers" href="#popup">Respuestas de propuestos 
+      <svg class="seeAnswers__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M396 512a112 112 0 1 0 224 0a112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3c7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176s176 78.8 176 176s-78.8 176-176 176z"/></svg>
+    </a>
+  </div>
+  <div id="popup" class="background">
+    <div class="answers" >
+      <a class="answers__close" href="#"> &times;</a>
+      <ul>
+        <li><b>Ejercicio 1</b>: 40.56 °C</li>
+        <li><b>Ejercicio 2</b>: 261.55 K</li>
+      </ul>
+    </div>
+  </div>
+  <script src="{% static 'js/topic.js' %}"></script>
+<div/>
+{% endblock %}
